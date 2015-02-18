@@ -1,0 +1,3 @@
+$(function($) {
+    $('.jbar').jbar();
+});

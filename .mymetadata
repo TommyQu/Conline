@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="conline"
+  id="myeclipse.1369989676353"
+  context-root="/Conline"
+  j2ee-spec="6.0"
+  archive="conline.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

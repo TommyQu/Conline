@@ -1,0 +1,45 @@
+.outside{
+	height:600px;
+	overflow:visible;
+}
+.course{
+	background:#cCFFCC;
+	margin:10px 0 10px 0;
+	border:2px solid rgba(77,208,28,0.5); 
+	box-shadow: 0px 0px 20px rgba(00,255,00,0.6);
+	width:px;
+	height:45px;
+	overflow:hidden;
+}
+.course>ul>li{
+	float:left;
+	padding:10px;
+	background:#CCFFCC;
+	font-size:18px;
+	font-weight:bold;
+	padding-top:10px;
+	color:#60626D;
+	}
+.course>ul{
+	list-style:none;
+	}
+.pagenumber{
+	text-align:center;
+}
+.studyarea{
+	width:1000px;
+	height:300px;
+}
+#mediaplayer
+{
+	padding-left:150px;
+	background:#Efe;
+}
+a:link {
+	color:#3333FF;
+ 	text-decoration: none;
+}
+a:visited {
+	color:#3333FF;
+	text-decoration: none;
+}

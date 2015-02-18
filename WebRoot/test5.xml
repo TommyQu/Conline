@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem xmlns="http://ghnjksw.oicp.net:8088/Conline/xml/problem.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="xml/problem.xsd"
+    eid="1"
+    type="程序题">
+	<program-problem  author="ghnjk">
+		<question>请编写一个程序，实现输入A和B，输出A+B的结果。</question>
+		<codeJudge>
+			<normal-judge caseCount="1">
+				<test-case answerWeight="1">
+					<input-file></input-file>
+					<output-file></output-file>
+					<judge-limit memory="1024000" time="1000" /> 
+				</test-case>
+			</normal-judge>
+		</codeJudge>
+		<keyword>C语言 #计算题</keyword>
+	</program-problem>
+</problem>

@@ -1,0 +1,101 @@
+@CHARSET "UTF-8";
+td span{
+	color:#444444;
+	font-weight:bold;
+}
+table,tr,td{
+	border-collapse:separate;
+    *border-spacing:expression(this.cellSpacing="0px");
+	border-spacing:0px;
+	}
+#postage table{
+	width:100%;	
+	margin-bottom:20px;
+	}
+#postage{
+	margin-top:10px;
+	height:auto !important; 
+	*width:960px;
+    height:480px; 
+    overflow:visible;
+	min-height:480px;
+	padding:0px 0px 0px 0px;
+	border: 3px solid #beCDff;
+	box-shadow: 0px 0px 20px rgb(66,66,255);
+}
+#postage table tr td{
+	padding-bottom:5px;
+	}
+.gettopic{
+	border: 3px solid #beCDff;
+	margin:0px;
+	background:#DFEEFF;
+	border-bottom:4px solid #6688ff;
+	padding:15px 0 15px 0 ;
+	text-align:left;
+	color:#333333;
+	font-size:18px;
+	font-weight:bold;
+	padding-left:50px;
+	overflow:hidden;
+	text-decoration:none;
+	}
+.getusername{
+	background:#EEEEFF;
+	border-right:2px solid #BBBBff;
+	border-bottom:2px solid #BBBBff;
+	padding:20px;
+	color:#4444FF;
+	text-align:center;
+	width:100px;
+	height:150px;
+	}
+.getcreatetime{
+	text-align:right;
+	font-size:14px;
+	padding:10px 10px 10px 0;
+	border-bottom:2px solid #BBBBff;
+}
+.getcontent{
+	padding-right:20px;
+	padding-bottom:10px;
+	color:#666666;
+	height:150px;
+	max-height:15px !important;
+	overflow:hidden;
+	font-size:12px;
+	text-align:left;
+	padding-left:40px;
+	border-bottom:1px solid #eeeeee;
+	}
+#reply{
+	margin-top:20px;
+	border-top:2px solid #BBBBff;
+	padding:20px;
+	color:#4444FF;
+	text-align:right;
+	width:100px;
+	height:150px;
+}
+#replycontent{
+		border-top:2px solid #BBBBff;
+}
+#replycontent textarea{
+		white-space:nowrap; 
+	text-align:left;
+	margin-top:20px;
+	width:600px;
+	height:150px;
+}
+#submit{
+	color:#555;
+	font-size:14px;
+	background-color: #999 !important;
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999), to(#EEE));
+  	background: -moz-linear-gradient(center top, #999, #EEE) repeat scroll 0 0 transparent;
+  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999', endColorstr='#EEEEEE', GradientType=0);
+	margin-top:30px;
+	margin-left:380px;
+	width:100px;
+	height:30px;
+	}

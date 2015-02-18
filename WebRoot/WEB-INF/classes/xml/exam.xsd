@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="conline-xsd/exam.xsd"
+	xmlns="conline-xsd/exam.xsd"
+	elementFormDefault="qualified">
+
+	<!--
+		 @author: ghnjk
+		 @date: 2013-05
+		 @description: C语言在线学习平台 试卷描述XML文件的XSD文档
+	-->
+  <xs:element name="exam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="problems" type="ProblemSet"/>
+        <xs:element name="keyword" type="KeyWordType"/>
+      </xs:sequence>
+      <xs:attribute name="eid" type="xs:integer"/>
+      <xs:attribute name="title" type="xs:string"/>
+      <xs:attribute name="description" type="xs:string"/>
+      <xs:attribute name="author" type="xs:string"/>      
+    </xs:complexType>
+  </xs:element>
+  <!--
+  试卷关键字
+  -->
+  <xs:complexType name="KeyWordType">
+    <xs:sequence>
+      <xs:element name="relate-to" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProblemSet">
+    <xs:sequence>
+      <xs:element name="item" type="ProblemItem" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProblemItem">
+    <xs:sequence>
+      <xs:element name="pid" />
+    </xs:sequence>
+    <xs:attribute name="weight" type="xs:integer" use="required"/>
+  </xs:complexType>
+</xs:schema>
+

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://ghnjksw.oicp.net:8088/Conline/xml/problem.xsd"
+	xmlns="http://ghnjksw.oicp.net:8088/Conline/xml/problem.xsd"
+	elementFormDefault="qualified">
+
+	<!--
+		 @author: ghnjk
+		 @date: 2013-05
+		 @description: C语言在线学习平台 题目描述XML文件的XSD文档
+	-->
+	<xs:element name="problem">
+    <xs:complexType>
+      <xs:choice>
+          <xs:element name="choice" type="ChoiceProblemContent" />
+          <xs:element name="multi-choice" type="MultiChoiceProblemContent"/>
+          <xs:element name="fill-blank" type="FillInBlankProblemContent"/>
+          <xs:element name="true-or-false" type="TrueOrFalseProblemContent"/>
+          <xs:element name="program-fill-blank" type="ProgramFillInBlankContent"/>
+          <xs:element name="program-problem"  type="ProgramProblemContent"/>
+      </xs:choice>
+      <xs:attribute name="eid" type="xs:integer" use="required" />
+      <xs:attribute name="type" type="ProblemType" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <!--
+  题目关键字
+  -->
+  <xs:complexType name="KeyWordType">
+    <xs:sequence>
+      <xs:element name="relate-to" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--
+    题目类型
+  -->
+  <xs:simpleType name="ProblemType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="单项题"/>
+      <xs:enumeration value="多选题"/>
+      <xs:enumeration value="填空题"/>
+      <xs:enumeration value="判断题"/>
+      <xs:enumeration value="程序填空题"/>
+      <xs:enumeration value="程序题"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+  单选题题目内容格式定义
+  -->
+  <xs:complexType name="ChoiceProblemContent">  
+    <xs:sequence>
+      <xs:element name="question" type="xs:string"/>
+      <xs:element name="option" type="xs:string" maxOccurs="20"/>
+      <xs:element name="answer" type="ChoiceCountType" />
+      <xs:element name="keyword" type="KeyWordType" />
+    </xs:sequence>
+    <xs:attribute name="choiceCount" type="ChoiceCountType" use="required"/>
+    <xs:attribute name="author" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:simpleType name="ChoiceCountType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <!--
+  多选题题目内容格式定义
+  -->
+  <xs:complexType name="MultiChoiceProblemContent">
+    <xs:sequence>
+      <xs:element name="question" type="xs:string"/>
+      <xs:element name="option" type="MultiChoiceAndAnswer" maxOccurs="20"/>
+      <xs:element name="keyword" type="KeyWordType" />
+    </xs:sequence>
+    <xs:attribute name="choiceCount" type="ChoiceCountType" use="required"/>
+    <xs:attribute name="author" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="MultiChoiceAndAnswer">
+	<xs:simpleContent>
+	    <xs:extension base="xs:string">
+   	 		<xs:attribute name="answerIsCheck" type="xs:boolean" use="required"/>
+    		<xs:attribute name="answerWeight" type="xs:integer" use="required"/>
+    	</xs:extension>
+	</xs:simpleContent>
+  </xs:complexType>
+  <!--
+  填空题目内容定义
+  -->
+  <xs:complexType name="FillInBlankProblemContent">
+    <xs:sequence>
+      <xs:element name="question">
+        <xs:complexType>
+          <xs:choice  minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="text" type="xs:string"/>
+            <xs:element name="input" type="FillBlankInput"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="keyword" type="KeyWordType" />
+    </xs:sequence>    
+    <xs:attribute name="author" type="xs:string" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="FillBlankInput">
+    <xs:sequence>
+      <xs:element name="show-text" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="answer" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="answerWeight" type="xs:integer" use="required"/>
+    <xs:attribute name="text-size" type="xs:integer" use="required"/>
+  </xs:complexType>
+  <!--
+  判断题内容定义
+  -->
+  <xs:complexType name="TrueOrFalseProblemContent">
+    <xs:sequence>
+      <xs:element name="question" type="xs:string"/>
+      <xs:element name="keyword" type="KeyWordType" />
+    </xs:sequence>
+    <xs:attribute name="answer" type="xs:boolean" use="required"/>
+    <xs:attribute name="author" type="xs:string" use="required"/>
+  </xs:complexType>
+  <!--
+  程序填空题内容格式定义
+  -->
+  <xs:complexType name="ProgramFillInBlankContent">
+    <xs:sequence>
+      <xs:element name="question" type="xs:string"/>
+      <xs:element name="program">
+        <xs:complexType>
+          <xs:choice  minOccurs="1" maxOccurs="unbounded">
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="input" type="FillBlankInput"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="codeJudge" type="CodeJudgeConfig" />
+      <xs:element name="keyword" type="KeyWordType" />
+    </xs:sequence>
+    <xs:attribute name="author" type="xs:string" use="required"/>
+  </xs:complexType>
+  <!--
+  程序题内容定义
+  -->
+  <xs:complexType name="ProgramProblemContent">
+    <xs:sequence>
+      <xs:element name="question" type="xs:string"/>
+      <xs:element name="codeJudge" type="CodeJudgeConfig" />
+      <xs:element name="keyword" type="KeyWordType" />
+    </xs:sequence>
+    <xs:attribute name="author" type="xs:string" use="required"/>
+  </xs:complexType>
+  <!--
+  代码评测配置
+  -->
+  <xs:complexType name="CodeJudgeConfig">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="normal-judge" type="NormalJudgeConfig" />
+        <xs:element name="special-judge" type="SpecialJudgeConfig"/>
+      </xs:choice>
+      <xs:element name="judge-limit" type="JudgeLimit" />
+    </xs:sequence>
+    <xs:attribute name="jucgeType" type="JudgeType" use="optional" default="normal"/>
+  </xs:complexType>
+  <xs:complexType name="JudgeLimit">
+    <xs:attribute name="memory" type="xs:integer" use="required"/>
+    <xs:attribute name="time" type="xs:integer" use="required"/>
+  </xs:complexType>
+  <xs:simpleType name="JudgeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="normal"/>
+      <xs:enumeration value="special"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="NormalJudgeConfig">
+    <xs:sequence>
+      <xs:element name="test-case" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="input-file" type="xs:string"/>
+            <xs:element name="output-file" type="xs:string"/>
+            <xs:element name="judge-limit" type="JudgeLimit"/>
+          </xs:sequence>
+          <xs:attribute name="answerWeight" type="xs:integer" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="caseCount" type="xs:integer" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="SpecialJudgeConfig">
+    <xs:sequence>
+      <xs:element name="test-case" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="input-file" type="xs:string"/>
+            <xs:element name="output-file" type="xs:string"/>
+            <xs:element name="judge-file" type="xs:string"/>
+            <xs:element name="judge-limit" type="JudgeLimit"/>
+          </xs:sequence>
+          <xs:attribute name="answerWeight" type="xs:integer" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="caseCount" type="xs:integer" use="required"/>
+  </xs:complexType>  
+</xs:schema>
+

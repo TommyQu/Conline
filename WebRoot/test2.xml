@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem xmlns="http://ghnjksw.oicp.net:8088/Conline/xml/problem.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="xml/
+                        problem.xsd"
+    eid="1"
+    type="多选题">
+	<multi-choice choiceCount="10" author="ghnjk">
+		<question>以能作为C语言标识符的是：</question>
+		<option answerWeight="1" answerIsCheck="true" >Main</option>
+		<option answerWeight="1" answerIsCheck="false" >0234</option>
+		<option answerWeight="1" answerIsCheck="true" >kkkk</option>
+		<option answerWeight="1" answerIsCheck="false" >int</option>		
+		<option answerWeight="1" answerIsCheck="true" >_nice</option>
+		<option answerWeight="1" answerIsCheck="false" >#define</option>
+		<option answerWeight="1" answerIsCheck="false" >0xfsd</option>
+		<option answerWeight="1" answerIsCheck="false" >double</option>
+		<option answerWeight="1" answerIsCheck="true" >__</option>		
+		<option answerWeight="1" answerIsCheck="false" >__ __</option>
+		<keyword><relate-to>C语言 # 标识符 # 变量名</relate-to></keyword>
+	</multi-choice>
+</problem>

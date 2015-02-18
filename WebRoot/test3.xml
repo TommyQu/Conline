@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem xmlns="http://ghnjksw.oicp.net:8088/Conline/xml/problem.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="xml/problem.xsd"
+    eid="1"
+    type="填空题">
+	<fill-blank  author="ghnjk">
+		<question>
+			<text>请问：1+1=</text>
+			<input text-size="15" answerWeight="1">
+				<show-text>请填入整数</show-text>
+			</input>
+			<text>。</text>
+		</question>
+		<keyword>C语言 #计算题</keyword>
+	</fill-blank>
+</problem>

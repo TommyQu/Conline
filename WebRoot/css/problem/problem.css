@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+/*
+	css for problem.js
+	author : ghnjk
+*/
+.show-problem-div{
+	background: #FFFFFF;
+	min-height: 40px;
+	width: 600px;
+	overflow-x: scroll;
+	padding:5px 0px;
+}
+.show-problem-div .title{
+	text-align: center;
+	font-size: 24px;
+	font:bold;
+}
+.show-problem-div .content{
+	text-align: left;
+	margin: 5px 25px;
+}

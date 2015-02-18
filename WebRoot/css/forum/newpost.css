@@ -1,0 +1,53 @@
+table,tr,td{
+	border-collapse:separate;
+    *border-spacing:expression(this.cellSpacing="0px");
+	border-spacing:0px;
+	}
+#forum{
+	height:auto !important; 
+	*width:960px;
+    height:380px; 
+    overflow:visible;
+	min-height:380px;
+	margin-top:10px;
+	padding:50px 0 0 60px ;
+	border: 3px solid #beCDff;
+	box-shadow: 0px 0px 20px rgb(66,66,255);
+}
+
+.tdclass{
+	text-align:left;
+}
+td{
+	padding-bottom:5px;
+	font-size:14px;
+	color:#66F;
+	text-shadow: 0px 0px 20px rgb(150,150,255);
+	width:200px;
+	text-align:center;
+}
+#title{
+	margin-left:0;
+	width:300px;
+	}
+#content{
+	white-space:nowrap; 
+	vertical-align:top;
+	text-align:left;
+	margin-top:20px;
+	width:500px;
+	height:200px;
+	}
+#submit{
+	color:#555;
+	font-size:14px;
+	background-color: #999 !important;
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#999), to(#EEE));
+  	background: -moz-linear-gradient(center top, #999, #EEE) repeat scroll 0 0 transparent;
+  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999', endColorstr='#EEEEEE', GradientType=0);
+	margin-top:30px;
+	margin-left:180px;
+	*margin-left:380px;
+	width:100px;
+	height:30px;
+	}

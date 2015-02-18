@@ -1,0 +1,81 @@
+@CHARSET "UTF-8";
+table,tr,td{
+	border-collapse:separate;
+    *border-spacing:expression(this.cellSpacing="0px");
+	border-spacing:0px;
+	}
+#searchpost{
+	height:auto !important; 
+	*width:960px;
+    height:480px; 
+    overflow:visible;
+	min-height:480px;
+	margin-top:10px;
+	padding:0 0 15px 0 ;
+	border: 3px solid #beCDff;
+	box-shadow: 0px 0px 20px rgb(66,66,255);
+}
+#searchpost table tr td{
+	padding-bottom:5px;
+	}
+#searchline{
+	height:100px;
+}
+#searchline td{
+	font-size:16px;
+	color:#6666FF;
+	text-shadow:0px 0px 40px rgb(66,66,255);
+}
+#getreplycount{
+	text-align:center;
+	font-size:14px;
+	color:#555555;
+	height:10px;
+	width:40px;
+	padding:2px 15px;
+	}
+#gettopic{
+	padding-top:15px;
+	text-align:left;
+	color:#3333FF;
+	font-size:15px;
+	width:400px;
+	padding-left:39px;
+	text-decoration:none;
+	}
+#getusername{
+	color:#4444FF;
+	text-align:left;
+	width:150px;
+	}
+#getcreatetime{
+	text-align:center;
+}
+#getcontent{
+	padding-right:20px;
+	margin-bottom:20px;
+	color:#666666;
+	width:400px;
+	max-height:15px !important;
+	overflow:hidden;
+	font-size:12px;
+	text-align:left;
+	padding-left:40px;
+	border-left:#22F;
+	}
+#getlastrelpytime{
+	width:400px;
+	color:#666666;
+	text-align:center;
+	margin-bottom:20px;
+}
+#submit{
+	width:60px;
+}
+a:link {
+	color:#3333FF;
+ 	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}

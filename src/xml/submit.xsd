@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://ghnjksw.oicp.net:8088/Conline/xml/submit.xsd"
+	xmlns="http://ghnjksw.oicp.net:8088/Conline/xml/submit.xsd"
+	elementFormDefault="qualified">
+
+	<!--
+		 @author: ghnjk
+		 @date: 2013-05
+		 @description: C语言在线学习平台 用户提交XML文件的XSD文档
+	-->
+  <xs:element name="submit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="problem-submit" type="ProblemSubmitType" maxOccurs="unbounded" minOccurs="1" />
+      </xs:sequence>
+      <xs:attribute name="uid" type="xs:integer" use="required" />
+      <xs:attribute name="eid" type="xs:integer" use="required" />
+      <xs:attribute name="submitTime" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ProblemSubmitType">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="option" type="xs:string" />
+        <xs:element name="check" type="xs:boolean" />
+        <xs:element name="text" type="xs:string" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="useTime" type="xs:integer" use="required" />
+    <xs:attribute name="index" type="xs:integer" use="required" />
+    <xs:attribute name="pid" type="xs:integer" use="required" />
+  </xs:complexType>
+</xs:schema>
+

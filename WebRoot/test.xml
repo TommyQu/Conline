@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem xmlns="http://ghnjksw.oicp.net:8088/Conline/xml/problem.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="xml/problem.xsd"
+    eid="1"
+    type="单选题">
+	<choice choiceCount="4" author="ghnjk">
+		<question>以不能作为C语言标识符的是：( )</question>
+		<option>int</option>
+		<option>0_o</option>
+		<option>Main</option>
+		<option>return</option>
+		<answer>2</answer>
+		<keyword>C语言 # 标识符 # 变量名</keyword>
+	</choice>
+</problem>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem xmlns="http://ghnjksw.oicp.net:8088/Conline/xml/problem.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="xml/problem.xsd"
+    eid="1"
+    type="程序填空题">
+	<program-fill-blank  author="ghnjk">
+		<question>请实现A+B的程序:</question>
+		<program>
+			<code><![CDATA[#include<stdio.h>
+int main(){
+	int a,b;
+	scanf( ]]></code>
+			<input text-size="20" answerWeight="0.5">
+				<show-text></show-text>
+			</input>
+			<code><![CDATA[ );
+	printf( ]]></code>
+			<input text-size="10" answerWeight="0.5">
+				<show-text></show-text>
+			</input>
+			<code><![CDATA[ );
+	return 0;
+}
+]]></code>
+		</program>
+		<codeJudge>
+			<normal-judge caseCount="1">
+				<test-case answerWeight="1">
+					<input-file></input-file>
+					<output-file></output-file>
+					<judge-limit memory="1024000" time="1000" /> 
+				</test-case>
+			</normal-judge>
+		</codeJudge>
+		<keyword>C语言 #计算题</keyword>
+	</program-fill-blank>
+</problem>

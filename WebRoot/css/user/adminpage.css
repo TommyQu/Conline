@@ -1,0 +1,44 @@
+*{
+	margin:0;
+	padding:0;
+}
+table,tr,td{
+	border-collapse:separate;
+    *border-spacing:expression(this.cellSpacing="0px");
+	border-spacing:0px;
+	}
+.left{
+	float:left;
+	padding:50px 20px 50px 50px;
+	width:250px;
+	height:650px;
+	background:#DDDDFF;
+}
+.right{
+	float:left;
+	width:1116px;
+	height:750px;
+	min-height:650px;
+	_height:650px;
+	overflow: visible;  
+	background:#22ff99;
+}
+li{
+	list-style-type:none;
+}
+a:link {
+	color:#3333FF;
+ 	text-decoration: none;
+}
+a:visited {
+	color:#3333FF;
+	text-decoration: none;
+}
+#foot	{
+	color:white;
+	text-align:center;
+	clear:both;
+	bottom:0px;
+	height:20px;
+	width:100%;
+}

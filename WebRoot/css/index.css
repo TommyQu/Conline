@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    margin-top:340px;
+    background:url(../img/index/indexback.png) no-repeat top center;
+}
+#usertr{
+	margin:0;
+}
+#banner {
+	margin:0;
+	background:#FFF;
+    text-align:center;
+    //border-top: 4px solid #6666ff;
+    border-top: 1px solid #C1C1C1;
+    border-left:2px solid #C1C1C1;
+    border-right:2px solid #C1C1C1;
+    border-bottom:0px;
+    width:374px !important;
+    margin-left:10%;
+    _padding-top:10px;
+    _margin-left:0;
+    _width:380px;
+    color:#666666;
+   	font-family: "黑体"; 
+	text-shadow: 0px 0px 10px rgba(00,00,00,0.2);
+}
+#user{
+	margin:0;
+	border-bottom: 1px solid #F1F1F1;
+    border-top:0px;
+    border-left:2px solid #C1C1C1;
+    border-right:2px solid #C1C1C1;
+	background:#FFF;
+	margin-left:10%;
+	padding-bottom:20px;
+
+}
+#user tr td{
+	width:100px;
+	padding-bottom:5px;
+}
+#loginbutton {
+	margin-left:10px;
+	width:120px;
+	height:40px;
+	background-color: #2244ff !important;
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2200FF), to(#6688cc));
+  	background: -moz-linear-gradient(center top, #2200FF, #6688cc) repeat scroll 0 0 transparent;
+  	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2200FF', endColorstr='#6688cc', GradientType=0);
+	COLOR: #ffffff;
+}
+
+#loginbutton:hover
+{
+	BACKGROUND-COLOR: #5599FF;
+}
+input{
+	height:30px;
+	font-size:16px;
+	}
+.user
+{
+	margin-left:10%;
+	font-weight:bold;
+	font-size:16px;
+    color:#222222;
+	text-shadow: 0px 0px 10px rgba(22,22,22,0.2);
+	text-decoration:none;
+}
+
+#username,#password
+{
+	background:transparent;
+	width:160px;
+    color:#000000;
+	text-shadow: 0px 0px 10px rgba(22,22,22,0.2);
+	text-decoration:none;
+	border:1px solid #5599FF;
+}
+
+#username:hover,#password:hover
+{
+	BACKGROUND-COLOR: #FFFFBB;
+}
+#register
+{
+	font-size: 18px;
+	font-weight: bold;
+}
+#register a{		
+	text-decoration:none;
+	color:#6666FF;
+}
+
+#forgetpassword
+{
+	margin-left:10px;
+}
